@@ -27,7 +27,15 @@ Dry run: 4 file(s) would be moved. Nothing was changed.
 Requires Python 3.8 or newer.
 
 ```bash
-git clone https://github.com/<your-username>/file-organizer.git
+pip install sefa177-file-organizer
+```
+
+The package is called `sefa177-file-organizer` on PyPI (the plain `file-organizer` name belongs to another project), but the command it installs is still `file-organizer`.
+
+Or install from source:
+
+```bash
+git clone https://github.com/Sefa177/file-organizer.git
 cd file-organizer
 pip install .
 ```
@@ -67,6 +75,26 @@ Edit the `CATEGORIES` dictionary in `file_organizer/organizer.py` to add extensi
 ```bash
 python -m unittest discover -s tests -v
 ```
+
+## Publishing to PyPI (maintainers)
+
+1. Create an account on [pypi.org](https://pypi.org), turn on two-factor authentication, then create an API token under *Account settings > API tokens*.
+2. Bump the version in both `pyproject.toml` and `file_organizer/__init__.py`. PyPI never lets you upload the same version twice.
+3. Build and check the package:
+
+   ```bash
+   python -m pip install --upgrade build twine
+   python -m build
+   python -m twine check dist/*
+   ```
+
+4. Upload it. When asked, use `__token__` as the username and your API token as the password:
+
+   ```bash
+   python -m twine upload dist/*
+   ```
+
+To rehearse first, create an account on [test.pypi.org](https://test.pypi.org) and upload there with `python -m twine upload --repository testpypi dist/*`.
 
 ## License
 
