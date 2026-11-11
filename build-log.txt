@@ -1,0 +1,13 @@
+* Creating isolated environment: venv+pip...
+* Installing packages in isolated environment:
+  - setuptools>=61
+* Getting build dependencies for sdist...
+running egg_info
+writing sefa177_file_organizer.egg-info\PKG-INFO
+writing dependency_links to sefa177_file_organizer.egg-info\dependency_links.txt
+writing entry points to sefa177_file_organizer.egg-info\entry_points.txt
+writing top-level names to sefa177_file_organizer.egg-info\top_level.txt
+error: package directory 'file_organizer' does not exist
+
+TIP pass --env-dir and --sdist-extract-dir to keep the build environment and sources, then see https://build.pypa.io/en/stable/how-to/troubleshooting.html#debug-a-failed-build for help debugging a failed build
+ERROR Backend subprocess exited when trying to invoke get_requires_for_build_sdist
