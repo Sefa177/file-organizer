@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "file-organizer"
+version = "0.1.0"
+description = "A tiny CLI that sorts a messy folder (like Downloads) into category subfolders, with dry-run and undo."
+readme = "README.md"
+requires-python = ">=3.8"
+license = { text = "MIT" }
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Environment :: Console",
+    "Topic :: Utilities",
+]
+
+[project.scripts]
+file-organizer = "file_organizer.cli:main"
+
+[tool.setuptools]
+packages = ["file_organizer"]
