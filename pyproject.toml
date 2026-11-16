@@ -1,14 +1,15 @@
 [build-system]
-requires = ["setuptools>=61"]
+requires = ["setuptools>=77"]
 build-backend = "setuptools.build_meta"
 
 [project]
 name = "sefa177-file-organizer"
-version = "0.1.0"
+version = "0.1.1"
 description = "A tiny CLI that sorts a messy folder (like Downloads) into category subfolders, with dry-run and undo."
 readme = "README.md"
 requires-python = ">=3.8"
-license = { text = "MIT" }
+license = "MIT"
+license-files = ["LICENSE"]
 authors = [{ name = "Sefa177" }]
 keywords = ["cli", "files", "organizer", "downloads", "cleanup", "sort"]
 classifiers = [
@@ -18,7 +19,6 @@ classifiers = [
     "Programming Language :: Python :: 3.10",
     "Programming Language :: Python :: 3.11",
     "Programming Language :: Python :: 3.12",
-    "License :: OSI Approved :: MIT License",
     "Operating System :: OS Independent",
     "Environment :: Console",
     "Topic :: Utilities",
