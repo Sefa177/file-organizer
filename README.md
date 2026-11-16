@@ -22,6 +22,29 @@ Dry run: 4 file(s) would be moved. Nothing was changed.
 - Optional `YYYY-MM` subfolders by modification date
 - Only touches files directly inside the folder, never existing subfolders
 
+## Installation
+
+Requires Python 3.8 or newer.
+
+```bash
+pip install sefa177-file-organizer
+```
+
+If `pip` is not recognized, use `python -m pip install sefa177-file-organizer` (or `py -m pip ...` on Windows).
+
+To install from source instead:
+
+```bash
+git clone https://github.com/Sefa177/file-organizer
+cd file-organizer
+pip install .
+```
+
+Then check that it works:
+
+```bash
+file-organizer --help
+```
 
 ## Usage
 
@@ -46,7 +69,6 @@ Each run saves a small log (`.file-organizer-log.json`) in the organized folder.
 ## Customizing categories
 
 Edit the `CATEGORIES` dictionary in `file_organizer/organizer.py` to add extensions or new categories.
-To rehearse first, create an account on [test.pypi.org](https://test.pypi.org) and upload there with `python -m twine upload --repository testpypi dist/*`.
 
 ## License
 
