@@ -24,7 +24,7 @@ Dry run: 4 file(s) would be moved. Nothing was changed.
 
 ## Installation
 
-Requires Python 3.8 or newer.
+Requires Python 3.10 or newer.
 
 ```bash
 pip install sefa177-file-organizer
